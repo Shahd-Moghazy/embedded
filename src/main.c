@@ -43,7 +43,7 @@ void ledTask(void *params) {
         xSemaphoreGive(resourceMutex);
 
         // Turn on LED if light, motion, or sound is detected
-        if (light > LIGHT_THRESHOLD || motion_detected || sound_detected) {
+        if (light > LIGHT_THRESHOLD || sound_detected) {
             led_on(LED_PIN);
         } else {
             led_off(LED_PIN);
